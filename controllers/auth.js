@@ -28,7 +28,7 @@ module.exports = {
       const accessToken = await signAccessToken(savedUser.id)
       const refreshToken = await signRefreshToken(savedUser.id)
 
-      res.json({ accessToken, refreshToken })
+      res.send({ accessToken, refreshToken })
     } catch (err) {
       if (err.isJoi === true) err.status = 422
       next(err)
