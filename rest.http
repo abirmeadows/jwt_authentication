@@ -1,0 +1,38 @@
+GET http://localhost:5000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDA1OTA0MTIsImV4cCI6MTYwMDU5MDQ0MiwiYXVkIjoiNWY2NmVjYjhjZDMxZDYxZjU0MGQ0MmMwIiwiaXNzIjoiYWJpci1tZWFkb3dzLm5ldGxpZnkuYXBwIn0.yF081WJcGCmjm1o3iPzNLTdkwbpEQdwEHOeos0YpVrg
+###
+GET http://localhost:5000/whatever
+
+### Login Route
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "testtest"
+}
+
+### Register Route
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "testtest"
+}
+
+### Refresh token Route
+POST http://localhost:5000/auth/refreshtoken
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDA2MTI1OTAsImV4cCI6MTYwMDYxMjYyMCwiYXVkIjoiNWY2NmVjYjhjZDMxZDYxZjU0MGQ0MmMwIiwiaXNzIjoiYWJpci1tZWFkb3dzLm5ldGxpZnkuYXBwIn0.xC1oySIxyzqygURw9bf4PuBm_aA4mjVHs8fSduV_SKE"
+}
+
+### Logout Route
+DELETE  http://localhost:5000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDA2NjcxMTksImV4cCI6MTYzMjIyNDcxOSwiYXVkIjoiNWY2NmVjYjhjZDMxZDYxZjU0MGQ0MmMwIiwiaXNzIjoiYWJpci1tZWFkb3dzLm5ldGxpZnkuYXBwIn0.sX2jGMboAYiQkwtndx683Bv8bhsRu66zmibBBfQ04rA"
+}
