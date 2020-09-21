@@ -9,6 +9,13 @@ const {
 const client = require('../helpers/init_redis')
 
 module.exports = {
+  verifyUser: async (req, res, next) => {
+    try {
+      res.sendStatus(204)
+    } catch (err) {
+      next(err)
+    }
+  },
   register: async (req, res, next) => {
     try {
       const result = await authSchema.validateAsync(req.body)

@@ -1,7 +1,11 @@
 GET http://localhost:5000
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDA1OTA0MTIsImV4cCI6MTYwMDU5MDQ0MiwiYXVkIjoiNWY2NmVjYjhjZDMxZDYxZjU0MGQ0MmMwIiwiaXNzIjoiYWJpci1tZWFkb3dzLm5ldGxpZnkuYXBwIn0.yF081WJcGCmjm1o3iPzNLTdkwbpEQdwEHOeos0YpVrg
-###
+
+### Unknown route
 GET http://localhost:5000/whatever
+
+### Verify user Route
+POST http://localhost:5000/auth/verifyuser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDA2OTUyMTYsImV4cCI6MTYwMDY5NTI0NiwiYXVkIjoiNWY2NmVjYjhjZDMxZDYxZjU0MGQ0MmMwIiwiaXNzIjoiYWJpci1tZWFkb3dzLm5ldGxpZnkuYXBwIn0.QNCiUIKAEzbYzP_jxxN7HP4LBw_kq4VhTh7Af3Nw0z0
 
 ### Login Route
 POST http://localhost:5000/auth/login
@@ -34,5 +38,5 @@ DELETE  http://localhost:5000/auth/logout
 Content-Type: application/json
 
 {
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDA2NjcxMTksImV4cCI6MTYzMjIyNDcxOSwiYXVkIjoiNWY2NmVjYjhjZDMxZDYxZjU0MGQ0MmMwIiwiaXNzIjoiYWJpci1tZWFkb3dzLm5ldGxpZnkuYXBwIn0.sX2jGMboAYiQkwtndx683Bv8bhsRu66zmibBBfQ04rA"
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDA2OTUyMTYsImV4cCI6MTYzMjI1MjgxNiwiYXVkIjoiNWY2NmVjYjhjZDMxZDYxZjU0MGQ0MmMwIiwiaXNzIjoiYWJpci1tZWFkb3dzLm5ldGxpZnkuYXBwIn0.eSlxqYkarmZvT0JoNh6g06KZJePq4PXwfDRNWyLaNXo"
 }
